@@ -18,10 +18,11 @@
                                     <a href="search.php" title="Search">
                                         <span class="glyphicon glyphicon-search"></span>&nbsp;Search</a>
                                 </li>
-                            <li>
-                                <a href="messages.php" title="Go to Messages">
-                                    <span class="glyphicon glyphicon-envelope"></span>&nbsp;Messages</a>
-                            </li>
+                                    <li                                 <?php if(isset($page) && $page === 'messages'){
+                                        ?> class="active" <?php } ?>>
+                                            <a href="messages.php" title="Go to Messages">
+                                                <span class="glyphicon glyphicon-envelope"></span>&nbsp;Messages</a>
+                                        </li>
                             <?php if(isset($page) && $page === 'viewing' && isset($_GET['view']) && isset($_GET['id']) && $_GET['id'] == $_SESSION['id']){?> 
                             <li class="active">
                                 <a href="#" title="You are currently viewing your profile!">

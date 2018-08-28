@@ -7,6 +7,6 @@ Features to be implemented:
 3. Profile Customisation
 4. Messaging
 
-This project is no longer under development and is provided as-is.
+This project is provided as-is.
 
 Written in PHP/MySQLI/HTML5/CSS3/Bootstrap.

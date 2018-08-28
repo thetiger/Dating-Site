@@ -1,0 +1,58 @@
+body
+{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+a.mylinks:link{
+    color:#ccc;
+    text-decoration:none;
+}
+a.mylinks:hover{
+    color:#ccc;
+    text-decoration:none;
+}
+a.mylinks:active{
+    color:inherit;
+    text-decoration:none;
+}
+a.mylinks:visited{
+    color:inherit;
+    text-decoration:none;
+}
+#dating.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+#dating.navbar-default {
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 1);
+    border-bottom-width: 2px;
+}
+#dating.navbar-default .navbar-nav>li>a {
+    color: rgba(250, 250, 250, 1);
+    background-color: rgba(0, 0, 0, 1);
+}
+#dating.navbar-default .navbar-nav>li>a:hover,
+#dating.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+#dating.navbar-default .navbar-nav>.active>a,
+#dating.navbar-default .navbar-nav>.active>a:hover,
+#dating.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 1);
+}
+#dating.navbar-default .navbar-toggle {
+    border-color: #ffffff;
+}
+#dating.navbar-default .navbar-toggle:hover,
+#dating.navbar-default .navbar-toggle:focus {
+    background-color: #ffffff;
+}
+#dating.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+#dating.navbar-default .navbar-toggle:hover .icon-bar,
+#dating.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #000000;
+}

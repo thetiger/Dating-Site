@@ -42,7 +42,6 @@
                                 <?php
                                 $ourlocation = \Users\users::getwildcarddata('dating_location','dt_name','dt_locationid',$userdata['location'],0);
                                 echo $ourlocation;
-                                var_dump($ourlocation);
                                 ?>
                             </div>
                         </div>

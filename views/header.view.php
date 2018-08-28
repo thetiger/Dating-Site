@@ -6,7 +6,7 @@
 
             <div class="row">
 
-                <div class="col-xs-12" style="padding:10px;">
+                <div class="col-xs-12" style="border-radius:10px; padding:15px;">
 
                 </div>
 
@@ -16,7 +16,7 @@
 
                         <a href="index.php" title="Home">
 
-                        <img src="http://via.placeholder.com/392x140" alt="<?php echo $sitename; ?> logo" class="img-responsive">
+                        <!-- <img src="http://via.placeholder.com/392x140" alt="<?php echo $sitename; ?> logo" class="img-responsive"> -->
                             <!-- <img src="http://localhost/fmeee5/images/core/logo.png" alt="<?php echo $sitename; ?> logo" class="img-responsive"> -->
 
                         </a>

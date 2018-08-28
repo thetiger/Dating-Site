@@ -9,4 +9,4 @@ Features to be implemented:
 
 This project is provided as-is.
 
-Written in PHP/MySQLI/HTML5/CSS3/Bootstrap.
+Written in PHP/MySQL/PDO/HTML5/CSS3/Bootstrap.

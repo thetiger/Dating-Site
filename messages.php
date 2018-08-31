@@ -13,12 +13,14 @@ require_once('classes/messages.class.php');
 
 require_once('classes/users.class.php');
 
-use Messages\messages;
-
 $pagename = 'Your Messages';
 $page = 'messages';
 
 include('includes/head.inc.php');
+
+$id = $_SESSION['id'];
+
+$information = \Users\users::getwildcarddata('dating_messages','*','dt_userto',$id,1);
 
 if(isset($_GET['view'])){
 

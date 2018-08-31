@@ -38,6 +38,7 @@ class users{
                 $string = '';
 
                 $myself = array();
+                
 
                 $conn = \Database\DbConnect::getConnection();
 
@@ -60,7 +61,7 @@ class users{
             }
             if($arraycheck == 1){
 
-                $data = $stmt->fetch();
+                $data = $stmt->fetchAll();
 
                 return $data;
             }

@@ -6,7 +6,7 @@
                     <div class="col-xs-12 col-md-4 col-sm-4 col-lg-2">
                         <div class="col-xs-12" style="border:2px solid #ccc; border-radius: 15px 0px 10px 0px; margin:6px; padding:5px;">
                             <div class="col-xs-12">
-                                <?php if(empty($userdata['image'])){
+                                <?php if(empty($userdata[0]['image'])){
                                     ?>
                                     <img src="https://www.contentchampion.com/wp-content/uploads/2013/11/avatar-placeholder.png" alt="Name here" class="img-responsive">
                                     <?php
@@ -15,7 +15,7 @@
                             </div>
                             <div class="col-xs-12">
                                 <p>
-                                    <?php echo $userdata['fname'].' '.$userdata['lname']; ?>
+                                    <?php echo $userdata[0]['fname'].' '.$userdata[0]['lname']; ?>
                                 </p>
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                             </div>
                             <div class="col-xs-8 col-md-10">
                                 <?php
-                            $bday = new DateTime($ouruserdata['dt_age']); // Your date of birth
+                            $bday = new DateTime($ouruserdata[0]['dt_age']); // Your date of birth
                             $today = new Datetime(date('m.d.y'));
                             $diff = $today->diff($bday);
                             ?>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-xs-8 col-md-10">
                                 <?php
-                                $ourlocation = \Users\users::getwildcarddata('dating_location','dt_name','dt_locationid',$userdata['location'],0);
+                                $ourlocation = \Users\users::getwildcarddata('dating_location','dt_name','dt_locationid',$userdata[0]['location'],0);
                                 echo $ourlocation;
                                 ?>
                             </div>
@@ -86,7 +86,7 @@
                             <h1>About Me</h1>
                         </div>
                         <div class="col-xs-12">
-                            <?php echo $ouruserdata['dt_about']; ?>
+                            <?php echo $ouruserdata['0']['dt_about']; ?>
                         </div>
                         <div class="col-xs-12">
                             <div class="col-xs-12">
@@ -95,9 +95,9 @@
                             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-0" style="border:5px solid #ccc; padding:1px; border-radius:0px 15px 0px 15px;">
                                 <div class="embed-responsive embed-responsive-16by9" style="border-radius:0px 15px 0px 15px;">
                                     <?php
-                                if(!empty($ouruserdata['dt_intro'])){
+                                if(!empty($ouruserdata['0']['dt_intro'])){
                                     ?>
-                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $ouruserdata['dt_intro']; ?>?rel=0" allowfullscreen></iframe>
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $ouruserdata['0']['dt_intro']; ?>?rel=0" allowfullscreen></iframe>
                                         <?php
                                 }
                                 else
@@ -120,8 +120,8 @@
                             <div class="col-xs-4">
                                 <ul>
                                     <?php
-                                    if(!empty($ouruserdata['dt_hobbies'])){
-                            $hobbies = explode(',', $ouruserdata['dt_hobbies']);
+                                    if(!empty($ouruserdata['0']['dt_hobbies'])){
+                            $hobbies = explode(',', $ouruserdata['0']['dt_hobbies']);
                             
                                 foreach($hobbies AS $mine){?>
                                         <li>
@@ -151,10 +151,10 @@
                         <div class="col-xs-12">
                             <div class="col-xs-12">
                                 <?php
-                             if(!empty($ouruserdata['dt_interests'])){
-                                $hobbies = explode(',', $ouruserdata['dt_interests']);
+                             if(!empty($ouruserdata['0']['dt_interests'])){
+                                $hobbies = explode(',', $ouruserdata['0']['dt_interests']);
                                 $amount = 0;
-                                $hobbies = explode(',', $ouruserdata['dt_interests']);
+                                $hobbies = explode(',', $ouruserdata['0']['dt_interests']);
                                 ?>
                                         <div class="col-xs-12 col-sm-4 col-md-4">
                                             <?php

@@ -1,3 +1,6 @@
+<?php
+use MyFunctions\myfunctions;
+?>
 <div class="container" style="background-color:#<?php echo $blockcolor; ?>;">
     <div class="row">
         <div class="container-fluid">
@@ -77,6 +80,13 @@
                             ?>
                             Age: <?php echo $diff->y; ?>
                                             </p>
+                                            <p>
+                                                <?php
+                                                $information = myfunctions::getdistance($_SESSION['postcode'],$ouruser['dt_postcode']);
+                                                $miles = $information['miles'];
+                                                echo ((int) ($miles)).' miles away';
+                                                ?>
+                                            </p>
                                     </div>
                                 </div>
                             </a>
@@ -88,6 +98,8 @@
 
                     </div>
                     <!-- Avatars End -->
+                </div>
+                <div class="col-xs-12">
                 </div>
             </div>
         </div>

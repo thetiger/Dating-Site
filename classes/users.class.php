@@ -74,7 +74,7 @@ class users{
 
         $conn = \Database\DbConnect::getConnection();
 
-        $stmt = $conn->prepare("SELECT id,fname,lname,dob,location FROM dating_users");
+        $stmt = $conn->prepare("SELECT id,fname,lname,dob,location,dt_postcode FROM dating_users WHERE id != ".$_SESSION['id']."");
         
         $resultset = $stmt->execute();
         

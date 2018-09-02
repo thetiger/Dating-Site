@@ -22,6 +22,7 @@ class accounts{
             if(password_verify($password,$test['dt_password']) === true){
 
                     $_SESSION['name'] = $test['fname'].' '.$test['lname'];
+                    $_SESSION['postcode'] = $test['dt_postcode'];
                 
                     $_SESSION['id'] = $test['id'];
                     

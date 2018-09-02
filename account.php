@@ -13,6 +13,8 @@ require_once('classes/users.class.php');
 
 require_once('classes/accounts.class.php');
 
+require_once('classes/myfunctions.class.php');
+
 use Accounts\accounts;
 
 use Users\users;

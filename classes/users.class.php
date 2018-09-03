@@ -43,7 +43,6 @@ class users{
                 $conn = \Database\DbConnect::getConnection();
 
                 $buildsql = 'SELECT '.$field.' FROM '.$table.' WHERE '.$where.' = '.$equals.'';
-
                 $stmt = $conn->prepare($buildsql);
                 
                 $stmt->execute();

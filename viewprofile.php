@@ -29,7 +29,9 @@ $page = 'viewing';
 if(isset($_GET['view']) && isset($_GET['id']) && !empty($_GET['id'])){
     $weneed = $_GET['id'];
     $ouruserdata = \Users\users::getwildcarddata('dating_additional','*','dt_userid',$weneed,1);
-    $userdata = \Users\users::getwildcarddata('dating_users','fname,lname,location','id',$weneed,1);
+    $userdata = \Users\users::getwildcarddata('dating_users','fname,lname,location,dt_postcode','id',$weneed,1);
+    $interests = \Users\users::getwildcarddata('dating_config','dt_hobbies','dt_id','1',0);
+    $interests = explode(',',$interests);
 }
 else
 {

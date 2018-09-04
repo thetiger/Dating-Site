@@ -37,7 +37,6 @@ $statsusers = \Users\users::getwildcarddata('dating_users','id','stats','',1);
 
 $statsmessages = \Users\users::getwildcarddata('dating_messages','id','stats','',1);
 
-var_dump($statsmessages);
 include('includes/head.inc.php');
 ?>
 

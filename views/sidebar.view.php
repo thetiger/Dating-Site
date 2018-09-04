@@ -27,17 +27,20 @@
 </div>
 <div class="col-xs-12">
     <div class="col-xs-12">
-        <h4>Statistics</h4>
+        <h4>Site statistics</h4>
     </div>
     <div class="col-xs-12">
         <div class="col-xs-12">
-            <span class="glyphicon glyphicon-envelope"></span> 700 sent
+            <span class="glyphicon glyphicon-envelope"></span> <?php echo count($statsmessages); ?> sent
         </div>
         <div class="col-xs-12">
-            <span class="glyphicon glyphicon-user"></span> 1000 users
+            <span class="glyphicon glyphicon-user"></span> <?php echo count($statsusers); ?> users
         </div>
         <div class="col-xs-12">
             <span class="glyphicon glyphicon-globe"></span> 7 continents
         </div>
+    </div>
+    <div class="col-xs-12">
+        <p>These stats reflect the site usage since launch.</p>
     </div>
 </div>

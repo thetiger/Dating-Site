@@ -39,10 +39,24 @@ class users{
 
                 $myself = array();
                 
-
                 $conn = \Database\DbConnect::getConnection();
 
+                $activate = false;
+
+                if($where === 'stats'){
+                    $activate = true;
+                    $buildsql = 'SELECT '.$field.' FROM '.$table.'';
+                    
+                }
+
+                if($where === ''){
+                    $activate = true;
+                    $buildsql = 'SELECT '.$field.' FROM '.$table.' ORDER BY dt_id DESC LIMIT 5';
+                }
+                if($activate === false)
+                {
                 $buildsql = 'SELECT '.$field.' FROM '.$table.' WHERE '.$where.' = '.$equals.'';
+                }
                 $stmt = $conn->prepare($buildsql);
                 
                 $stmt->execute();

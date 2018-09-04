@@ -7,7 +7,7 @@ session_start();
 require_once('config.php');
 require_once('classes/db.class.php');
 require_once('classes/accounts.class.php');
-
+require_once('classes/users.class.php');
 
 use Accounts\accounts;
 
@@ -31,6 +31,13 @@ if(accounts::checkpost('login') === true){
 
 $pagename = 'Welcome to the Free Dating Platform!';
 
+$stories = \Users\users::getwildcarddata('dating_news','dt_id,dt_title,dt_description,dt_date','','',1);
+
+$statsusers = \Users\users::getwildcarddata('dating_users','id','stats','',1);
+
+$statsmessages = \Users\users::getwildcarddata('dating_messages','id','stats','',1);
+
+var_dump($statsmessages);
 include('includes/head.inc.php');
 ?>
 
